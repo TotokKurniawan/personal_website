@@ -274,7 +274,7 @@
         <li><a href="#education" @click="mm=false"
             class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Education</a>
         </li>
-        <li><a href="#certifications" @click="mm=false"
+        <li><a href="#certificate" @click="mm=false"
             class="block text-zinc-700 dark:text-zinc-300 hover:text-accent transition-colors">Certifications</a>
         </li>
         <li><a href="#contact" @click="mm=false"
@@ -766,7 +766,7 @@ mb-8 md:mb-10">
           <template x-for="(project, index) in filteredProjects.slice(0, showAll ? filteredProjects.length : 6)"
             :key="index">
             <article
-              class="group bg-white dark:bg-zinc-900 rounded-2md overflow-hidden border border-zinc-200 dark:border-zinc-800 hover:border-orange-500 transition-all duration-300">
+              class="group bg-white dark:bg-zinc-900 rounded-md overflow-hidden border border-zinc-200 dark:border-zinc-800 hover:border-orange-500 transition-all duration-300">
               <!-- IMAGE -->
               <div class="overflow-hidden h-56">
                 <img :src="project.image" :alt="project.title"
@@ -990,93 +990,139 @@ mb-8 md:mb-10">
     <!-- ═══ CONTACT ═══ -->
     <section id="contact" class="py-24">
       <div class="max-w-6xl mx-auto px-6">
+
         <div class="bg-zinc-900 dark:bg-zinc-800 rounded-3xl p-10 md:p-16 relative overflow-hidden">
+
+          <!-- BACKGROUND GLOW -->
           <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full blur-3xl pointer-events-none">
           </div>
+
           <div class="absolute bottom-0 left-0 w-40 h-40 bg-orange-500/10 rounded-full blur-2xl pointer-events-none">
           </div>
-          <div class="relative z-10 grid md:grid-cols-2 gap-12 items-start">
-            <!-- LEFT -->
-            <div>
+
+          <div class="relative z-10 grid md:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT PHOTO -->
+            <div class="reveal d2 flex justify-center md:justify-start order-1">
+
+              <div class="relative w-full max-w-md">
+
+                <!-- GLOW -->
+                <div class="absolute -inset-2 bg-orange-500/20 blur-2xl rounded-3xl"></div>
+
+                <!-- IMAGE -->
+                <div class="relative overflow-hidden rounded-3xl border border-zinc-700 bg-zinc-900">
+
+                  <img src="foto3.jpg" alt="Totok Kurniawan" class="w-full h-[500px] object-cover object-top">
+
+                </div>
+
+                <!-- BADGE -->
+                <div class="absolute bottom-5 left-5 bg-orange-500 text-white px-5 py-2 rounded-2xl shadow-lg">
+
+                  <p class="text-sm font-semibold">
+                    Fullstack Web & Mobile Developer
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="order-2">
+
               <p class="reveal text-xs font-medium text-orange-500 tracking-widest uppercase mb-3">
                 Get in touch
               </p>
+
               <h2 class="reveal d1 font-bold text-4xl md:text-5xl text-white leading-tight mb-5">
                 Let's build something amazing together
               </h2>
+
               <p class="reveal d2 text-zinc-400 leading-relaxed mb-8">
-                I'm available for freelance projects, web development, mobile applications, dashboard systems,
-                and API integrations. Feel free to contact me for collaboration or project discussions.
+                I'm available for freelance projects, web development, mobile applications,
+                dashboard systems, and API integrations. Feel free to contact me for
+                collaboration or project discussions.
               </p>
+
               <!-- CONTACT INFO -->
               <div class="reveal d3 flex flex-col gap-4">
+
                 <!-- EMAIL -->
                 <a href="mailto:totokkurniawan710@gmail.com"
                   class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+
                   <span
                     class="w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-xl group-hover:bg-orange-500/20 transition-colors">
+
                     <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
+
                   </span>
+
                   <span class="text-sm">
                     totokkurniawan710@gmail.com
                   </span>
+
                 </a>
+
                 <!-- GITHUB -->
                 <a href="https://github.com/TotokKurniawan" target="_blank" rel="noopener noreferrer"
                   class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+
                   <span
                     class="w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-xl group-hover:bg-orange-500/20 transition-colors">
+
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+
                       <path
                         d="M12 0C5.37 0 0 5.37 0 12a12 12 0 008.21 11.39c.6.11.79-.26.79-.58v-2.23c-3.34.73-4.04-1.41-4.04-1.41-.54-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.21.09 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.49.99.11-.77.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.19.69.8.58A12 12 0 0024 12c0-6.63-5.37-12-12-12z" />
+
                     </svg>
+
                   </span>
+
                   <span class="text-sm">
                     github.com/TotokKurniawan
                   </span>
+
                 </a>
+
                 <!-- LINKEDIN -->
                 <a href="https://www.linkedin.com/in/totok-kurniawan-14477124a/" target="_blank"
                   rel="noopener noreferrer"
                   class="group flex items-center gap-3 text-zinc-400 hover:text-white transition-colors">
+
                   <span
                     class="w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-xl group-hover:bg-orange-500/20 transition-colors">
+
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+
                       <path
                         d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8 19H5V9h3v10zM6.5 7.73A1.75 1.75 0 116.5 4.2a1.75 1.75 0 010 3.53zM20 19h-3v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.97V19h-3V9h2.88v1.37h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V19z" />
+
                     </svg>
+
                   </span>
+
                   <span class="text-sm">
                     linkedin.com/in/totok-kurniawan-14477124a
                   </span>
+
                 </a>
+
               </div>
+
             </div>
-            <!-- RIGHT FORM -->
-            <div class="reveal d2">
-              <br><br>
-              <form class="flex flex-col gap-4">
-                <div class="grid sm:grid-cols-2 gap-4">
-                  <input type="text" placeholder="Your name"
-                    class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors">
-                  <input type="email" placeholder="Your email"
-                    class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors">
-                </div>
-                <input type="text" placeholder="Project subject"
-                  class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors">
-                <textarea rows="5" placeholder="Tell me about your project..."
-                  class="w-full bg-zinc-800 border border-zinc-700 text-white text-sm rounded-xl px-4 py-3 placeholder-zinc-500 focus:outline-none focus:border-orange-500 transition-colors resize-none"></textarea>
-                <button type="submit"
-                  class="w-full bg-orange-500 hover:bg-orange-600 transition-colors text-white font-semibold py-3 rounded-xl">
-                  Send Message
-                </button>
-              </form>
-            </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
@@ -1190,6 +1236,18 @@ mb-8 md:mb-10">
             image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200',
             description: 'Web-based task management application similar to Trello for managing projects, organizing tasks, tracking progress, and improving team collaboration.'
           },
+          {
+            title: 'Inventory Management System',
+            type: 'website',
+            image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1200',
+            description: 'Web-based inventory management system for managing stock items, sales and purchase transactions, supplier data, and monitoring product availability efficiently.'
+          },
+          {
+            title: 'Sony Nursery Plant Recommendation System',
+            type: 'website',
+            image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200',
+            description: 'Web-based plant recommendation system for helping users choose suitable plants for gardens based on garden concept, lighting conditions, watering needs, and planting location.'
+          },
 
         ],
 
@@ -1238,8 +1296,16 @@ mb-8 md:mb-10">
 
         updateSection() {
           const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 60;
-          if (atBottom) { this.s = 'contact'; return; }
-          const ids = ['contact', 'blog', 'reviews', 'about', 'work', 'services', 'hero'];
+          if (atBottom) { this.s = 'contact'; return; } const ids = [
+            'contact',
+            'certificate',
+            'education',
+            'portfolio',
+            'experience',
+            'services',
+            'about',
+            'hero'
+          ];
           for (const id of ids) {
             const el = document.getElementById(id);
             if (el && window.scrollY >= el.offsetTop - 130) { this.s = id; return; }
